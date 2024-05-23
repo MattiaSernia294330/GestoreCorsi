@@ -5,7 +5,8 @@ class DBConnect:
     """Class that is used to create and manage a pool of connections to the database.
     It implements a class method that works as a factory for lending the connections from the pool"""
     # we keep the pool of connections as a class attribute, not an instance attribute
-    _cnxpool = None
+    _cnxpool = None #attributi che tiene traccia delle connessioni, non ha il se3lf perchè è una variabile condivisa nella classe
+
 
     def __init__(self):
         raise RuntimeError('Do not create an instance, use the class method get_connection()!')
